@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import sanityClient from '../../client.js';
+import BlockContent from '@sanity/block-content-to-react';
 
 import { PageContainer } from '../UniversalStyledElements';
 
@@ -10,10 +11,11 @@ export default function Art(){
     const [postData, setPost] = useState(null);
 
     useEffect(() => {
-        sanityClient
-            .fetch(`*[_type == "post"]{
+        let isUnmount = false
+        sanityClient.fetch(`*[_type == "artwork"]{
                 title, 
-                slug, 
+                slug,
+                body,
                 mainImage{
                     asset->{
                             _id,
@@ -22,8 +24,26 @@ export default function Art(){
                     alt
                 }
             }`)
-            .then((data) => setPost(data))
-            .catch(console.error)})
+            .then((data) => { 
+                if(!isUnmount){
+                console.log(data)
+                console.log('this all the artworks fetched...')
+                setPost(data)
+            }})
+            .catch(console.error)
+
+            return() => {
+                isUnmount = true;
+            }
+}, [])
+
+if(!postData){
+    return (
+<div>
+    <h1>Loading...</h1>
+</div>
+    )
+}
 
 
 
@@ -36,8 +56,7 @@ export default function Art(){
                 <h2>Welcome to my page of art peices</h2>
                 <div>
                     {postData && postData.map((art, index)=>(
-                    <article key={art.slug}>
-                    <Link to={`/art/:${art.slug.current}`} key={art.slug.current}>
+                    <article key={art.slug.current}>
                         <span>
                             <img 
                                 src={art.mainImage.asset.url}
@@ -48,8 +67,10 @@ export default function Art(){
                             <h3>
                                 {art.title}
                             </h3>
+                            <div>
+                            <BlockContent blocks={art.body} projectId="6tkjpda9" dataset="production"/>
+                            </div>
                         </span>
-                    </Link>
                     </article>
                     ))}
                 </div>
@@ -58,3 +79,6 @@ export default function Art(){
     </PageContainer>
     )
 }
+
+// This code is to add our slugs in when we are able to...Maybe in v2.0
+/* <Link to={`/art/:${art.slug.current}`} key={art.slug.current}></Link> */

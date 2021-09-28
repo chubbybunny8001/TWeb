@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.18.0",
+    "@sanity/image-url": "^1.0.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -40,6 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ],
-    "proxy": ["https://localhost:3333"]
+    "proxy": [
+      "https://localhost:3333"
+    ]
   }
 }
