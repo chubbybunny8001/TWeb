@@ -1,57 +1,173 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.main`
-    margin: 0;
-    padding: 0;
-    background-color: #fdf8ec;
-`;
+    padding: 0.5rem;
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 1fr 1fr 1fr;
 
-export const HeaderContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    background-color: #fdf8ec;
-    border-radius: 20%;
-`;
+    grid-template-rows: 1fr 1fr .8fr;
 
-export const MainHeader = styled.h1`
-    background-color: grey;
-    border-radius: 50%;
-    padding: 1rem;
-`;
+    grid-template-areas: 
+    "main main sidebar"
+    "main main sidebar"
+    "content1 content2 content3"
+    ;
 
-export const BodyContainer = styled.div`
-    background-color: #fdf8ec;
-`;
+    grid-gap: .5rem;
 
-export const LogoContainer = styled.div`
-    background-color: #fdf8ec;
-    padding: 20px;
+    @media screen and (max-width: 786px){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr .5fr .5fr;
+        grid-template-areas: 
+        "main main main"
+        "main main main"
+        "sidebar content2 content2"
+        "sidebar content2 content2"
+        "content3 content3 content3" 
+        ;
+    }
+    @media screen and (max-width: 480px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr .5fr .5fr .5fr;
+        grid-template-areas: 
+        "main"
+        "main"
+        "sidebar"
+        "content1"
+        "content1"
+        "content3"
+        ;
+    }   
 `;
 
 export const LogoImage = styled.img`
+    grid-area: main;
+    max-width:100%;
+    max-height:100%;
+    border-radius: 20px;
+    margin: auto;
+`;
+
+export const SidebarContent = styled.div`
+    grid-area:sidebar;
+    background-color: #000000;
+    border-radius: 20px;
+    
+    @media screen and (max-width: 786px){
+        background-color: #c38e7a;
+    } 
+    @media screen and (max-width: 480px){
+        background-color: #000000;
+    }
+`;
+
+export const SidebarContentContainer = styled.div`
+    display: grid;
+    height: 100%;
     width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "heading heading"
+    "subHeading subHeading"
+    "sideBarBody sideBarBody"
+    "sideBarBody sideBarBody"
+    
+    ;
 `;
 
-export const WordsContainer = styled.div`
-    background-color: #fdf8ec;
+export const SidebarHead = styled.h1`
+    text-decoration: overline;
+    color: #fdf8ec;
+    margin: 1rem;
+
+    grid-area: heading;
+
+    @media screen and (max-width: 786px){
+        color: #000000;
+    } 
+    @media screen and (max-width: 480px){
+        color: #fdf8ec;
+    }
 `;
 
-export const BodyWords = styled.p`
+export const SidebarSubHead = styled.h2`
+    color: #fdf8ec;
+    margin: .5rem;
+    grid-area: subHeading;
 
+    @media screen and (max-width: 786px){
+        color: #000000;
+    } 
+    @media screen and (max-width: 480px){
+        color: #fdf8ec;
+    }
 `;
 
-export const SocialsContainer = styled.div`
-    position: absolute; bottom: 0;left: 0;
-    background-color: #fdf8ec;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+export const ContactSquare = styled.p`
+    margin: .5rem;
 `;
 
-export const IndividualSocialsContainer = styled.div`
+export const SidebarBody = styled.h3`
+    color: #fdf8ec;
+    margin: .5rem;
+    grid-area: sideBarBody;
 
+    @media screen and (max-width: 786px){
+        color: #000000;
+    } 
+    @media screen and (max-width: 480px){
+        color: #fdf8ec;
+    }
 `;
 
-export const Socials = styled.img`
+export const ContentContainerImg1 = styled.img`
+    grid-area:content1;
+    max-width:100%;
+    max-height: 100%;
+    border-radius: 20px;
+    margin: auto;
+    overflow: hidden;
 
+    &:hover{
+        border-radius: 50%;
+    }
+
+    @media screen and (max-width: 786px){
+        display: none;
+    }
+    @media screen and (max-width: 480px){
+        display: block;
+        height:100%;
+        width: auto;
+        overflow: hidden;
+    }
+`;
+
+export const ContentContainerImg2 = styled.img`
+    grid-area:content2;
+    max-width:100%;
+    max-height: 100%;
+    border-radius: 20px;
+    margin: auto;
+    overflow: hidden;
+
+    &:hover{
+        border-radius: 50%;
+    }
+
+    @media screen and (max-width: 480px){
+        display: none;
+    }
+`;
+
+export const ContentContainer3 = styled.div`
+    grid-area:content3;
+    background-color: #c38e7a;
+    border-radius: 20px;
+`;
+
+export const Content3 = styled.h2`
+    margin: 1rem;
 `;
