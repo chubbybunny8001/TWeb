@@ -2,7 +2,7 @@ import React from 'react';
 import LogoImg from '../../assets/tayweb.jpg';
 import Wood1 from '../../assets/wood1.jpg';
 import Wood2 from '../../assets/wood2.jpg';
-import { Content3, ContentContainer, ContentContainerImg1, ContentContainer2, ContentContainer3, LogoImage, SidebarBody, SidebarContent, SidebarContentContainer, ContactSquare, SidebarHead, SidebarSubHead, ContentContainerImg2 } from './HomeElements';
+import { Content3, ContentContainer, ContentContainerImg1, ContentContainer3, LogoImage, SidebarBody, SidebarContent, SidebarContentContainer, ContactSquare, SidebarHead, SidebarSubHead, ContentContainerImg2 } from './HomeElements';
 export default function Home(){
     return (
 <ContentContainer>
