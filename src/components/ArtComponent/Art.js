@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import sanityClient from '../../client.js';
-import BlockContent from '@sanity/block-content-to-react';
 
 import { PageContainer } from '../UniversalStyledElements';
+import { ArtworkBlock, ArtworkBlockCont, ArtworkBodyCont, ArtworkContainer, ArtworkHead, ArtworkImg, ArtworkPageHead, ArtworkPageHeading, ArtworkPageSubHead, Artworks } from './ArtElements.js';
 
 //Art is all of the art, and artwork is the single peice of art!
 
@@ -50,32 +50,30 @@ if(!postData){
 
     return (
     <PageContainer>
-        <main>
-            <section>
-                <h1>Art Page</h1>
-                <h2>Welcome to my page of art peices</h2>
-                <div>
-                    {postData && postData.map((art, index)=>(
-                    <article key={art.slug.current}>
-                        <span>
-                            <img 
-                                src={art.mainImage.asset.url}
-                                alt={art.mainImage.alt}
-                            />
-                        </span>
-                        <span >
-                            <h3>
+        <ArtworkContainer>
+            <ArtworkPageHeading>
+                <ArtworkPageHead>Art Page</ArtworkPageHead>
+                <ArtworkPageSubHead>Welcome to my page of art peices</ArtworkPageSubHead>
+            </ArtworkPageHeading>
+            <ArtworkContainer>
+                {postData && postData.map((art, index)=>(
+                <Artworks key={art.slug.current}>
+                        <ArtworkImg 
+                            src={art.mainImage.asset.url}
+                            alt={art.mainImage.alt}
+                        />
+                        <ArtworkBodyCont>
+                            <ArtworkHead>
                                 {art.title}
-                            </h3>
-                            <div>
-                            <BlockContent blocks={art.body} projectId="6tkjpda9" dataset="production"/>
-                            </div>
-                        </span>
-                    </article>
+                            </ArtworkHead>
+                            <ArtworkBlockCont>
+                            <ArtworkBlock blocks={art.body} projectId="6tkjpda9" dataset="production"/>
+                            </ArtworkBlockCont>
+                        </ArtworkBodyCont>
+                </Artworks>
                     ))}
-                </div>
-            </section>
-        </main>
+                </ArtworkContainer>
+        </ArtworkContainer>
     </PageContainer>
     )
 }

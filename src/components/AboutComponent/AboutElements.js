@@ -4,7 +4,7 @@ export const HomeContentContainer = styled.div`
     padding: 1rem;
     display: grid;
     height: 90vh;
-    background-color: grey;
+    background-color: #c38e7a;
 
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .3fr .2fr 1.5fr;
@@ -57,8 +57,7 @@ export const AboutCountainer = styled.div`
         "aboutBody aboutBody aboutBody aboutBody"
         ;
     }
-
-    overflow: scroll;
+    overflow: hidden;
 `;
 
 export const AboutHeader = styled.h1`
