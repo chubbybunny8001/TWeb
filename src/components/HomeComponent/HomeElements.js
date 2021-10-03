@@ -29,14 +29,11 @@ export const ContentContainer = styled.main`
     }
     @media screen and (max-width: 480px){
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr .5fr .5fr .5fr;
+        grid-template-rows: 3fr .2fr 1fr;
         grid-template-areas: 
         "main"
-        "main"
-        "sidebar"
-        "content1"
-        "content1"
         "content3"
+        "sidebar"
         ;
     }   
 `;
@@ -121,6 +118,8 @@ export const SidebarBody = styled.h3`
     @media screen and (max-width: 480px){
         color: #fdf8ec;
     }
+    height: 90%;
+    overflow: scroll;
 `;
 
 export const ContentContainerImg1 = styled.img`
@@ -139,10 +138,7 @@ export const ContentContainerImg1 = styled.img`
         display: none;
     }
     @media screen and (max-width: 480px){
-        display: block;
-        height:100%;
-        width: auto;
-        overflow: hidden;
+        display: none;
     }
 `;
 
