@@ -67,13 +67,13 @@ export const SidebarContentContainer = styled.div`
     height: 100%;
     width: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .3fr .3fr 1fr 1fr 1fr;
     grid-template-areas:
     "heading heading"
     "subHeading subHeading"
     "sideBarBody sideBarBody"
     "sideBarBody sideBarBody"
-    
+    "sideBarBody sideBarBody"
     ;
 `;
 
@@ -110,6 +110,7 @@ export const ContactSquare = styled.p`
 `;
 
 export const SidebarBody = styled.h3`
+    font-size: 105%;
     color: #fdf8ec;
     margin: .5rem;
     grid-area: sideBarBody;
