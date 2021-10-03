@@ -1,6 +1,6 @@
 export default {
   name: 'artwork',
-  title: 'Artwork',
+  title: 'Projects',
   type: 'document',
   fields: [
     {
@@ -30,12 +30,6 @@ export default {
       options: {
         hotspot: true,
       },
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
       name: 'publishedAt',
