@@ -56,6 +56,7 @@ export const SidebarContent = styled.div`
     } 
     @media screen and (max-width: 480px){
         background-color: #000000;
+        height: 50%;
     }
 `;
 
@@ -72,6 +73,7 @@ export const SidebarContentContainer = styled.div`
     "sideBarBody sideBarBody"
     "sideBarBody sideBarBody"
     ;
+    @media screen and (max-width: 480px){}
 `;
 
 export const SidebarHead = styled.h1`
@@ -104,22 +106,27 @@ export const SidebarSubHead = styled.h2`
 
 export const ContactSquare = styled.p`
     margin: .5rem;
+    text-align: center;
+    font-weight: 800;
+    text-decoration: underline;
 `;
 
 export const SidebarBody = styled.h3`
-    font-size: 105%;
+    font-size: 1.5em;
     color: #fdf8ec;
     margin: .5rem;
     grid-area: sideBarBody;
 
     @media screen and (max-width: 786px){
+        
         color: #000000;
     } 
     @media screen and (max-width: 480px){
         color: #fdf8ec;
+        font-size: 1em;
     }
     height: 90%;
-    overflow: scroll;
+    overflow-x: hidden;
 `;
 
 export const ContentContainerImg1 = styled.img`
@@ -167,4 +174,6 @@ export const ContentContainer3 = styled.div`
 
 export const Content3 = styled.h2`
     margin: 1rem;
+    text-align: center;
+    font-size: 2em;
 `;

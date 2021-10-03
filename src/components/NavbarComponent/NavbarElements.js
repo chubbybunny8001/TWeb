@@ -16,8 +16,7 @@ export const NavLogo = styled.h1`
     margin: .25rem;
     margin-left: 1rem;
     padding: .15rem;
-    background-color: #fdf8eb;
-    border-radius: 10px;
+    color: #fdf8eb;
 `;
 
 export const NavbarNav = styled.ul`
