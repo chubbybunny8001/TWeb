@@ -64,6 +64,7 @@ export const AboutHeader = styled.h1`
     padding: .5rem;
     color: #fdf8ec;
     grid-area: aboutHead;
+    text-decoration: overline;
 `;
 
 export const AboutSubHead = styled.h3`
@@ -78,4 +79,6 @@ color: #fdf8ec;
 grid-area: aboutBody;
 height: 100%;
 overflow: scroll;
+overflow-x: hidden;
+font-size: 1.2em;
 `;

@@ -52,8 +52,8 @@ if(!postData){
     <PageContainer>
         <ArtworkContainer>
             <ArtworkPageHeading>
-                <ArtworkPageHead>Art Page</ArtworkPageHead>
-                <ArtworkPageSubHead>Welcome to my page of art peices</ArtworkPageSubHead>
+                <ArtworkPageHead>Projects Page</ArtworkPageHead>
+                <ArtworkPageSubHead>Welcome to my page of past projects</ArtworkPageSubHead>
             </ArtworkPageHeading>
             <ArtworkContainer>
                 {postData && postData.map((art, index)=>(

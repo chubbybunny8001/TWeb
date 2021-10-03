@@ -18,7 +18,7 @@ export const ArtworkPageHeading = styled.section`
     text-align: center;
     border-radius: 20px;
     background-color: #000000;
-    margin: 1rem;
+    margin: .5rem;
 `;
 
 export const ArtworkPageHead = styled.h1`
@@ -59,7 +59,6 @@ export const Artworks = styled.article`
         ;
     }
 `;
-
 export const ArtworkImg = styled.img`
     grid-area: images;
     max-width: 100%;
@@ -69,18 +68,36 @@ export const ArtworkImg = styled.img`
 `;
 
 export const ArtworkBodyCont = styled.span`
+    margin: auto;
+    width: 100%;
+    height: 100%;
     grid-area: body;
-    background-color: lavender;
+    background-color: #c38e7a;
+    border-radius: 20px;
     display: grid;
-
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: .3fr 1fr;
+    grid-template-areas: 
+    "title"
+    "descr"
+    ;
 `;
 
 export const ArtworkHead = styled.h3`
+    grid-area: title;
+    font-size: 2em;
+    text-decoration: overline;
+    margin: auto;
 
 `;
 
 export const ArtworkBlockCont = styled.div`
-
+    grid-area: descr;
+    text-align: center;
+    font-size: 1.4em;
+    height: 100%;
+    margin: .5rem;
 `;
 
 export const ArtworkBlock = styled(BlockContent)`
