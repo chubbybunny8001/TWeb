@@ -37,13 +37,13 @@ export default function Art(){
             }
 }, [])
 
-if(!postData){
-    return (
-<div>
-    <h1>Loading...</h1>
-</div>
-    )
-}
+// if(!postData){
+//     return (
+// <div>
+//     <h1>Loading...</h1>
+// </div>
+//     )
+// }
 
 
 
@@ -55,7 +55,22 @@ if(!postData){
                 <ArtworkPageHead>Projects Page</ArtworkPageHead>
                 <ArtworkPageSubHead>Welcome to my page of past projects</ArtworkPageSubHead>
             </ArtworkPageHeading>
+            
             <ArtworkContainer>
+            <Artworks>
+                        <ArtworkImg 
+                            src=''
+                            alt='artPicture'
+                        />
+                        <ArtworkBodyCont>
+                            <ArtworkHead>
+                                Test 1
+                            </ArtworkHead>
+                            <ArtworkBlockCont>
+                            <ArtworkBlock>Here is my paragraph...</ArtworkBlock>
+                            </ArtworkBlockCont>
+                        </ArtworkBodyCont>
+                </Artworks>
                 {postData && postData.map((art, index)=>(
                 <Artworks key={art.slug.current}>
                         <ArtworkImg 

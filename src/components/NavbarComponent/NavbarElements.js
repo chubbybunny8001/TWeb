@@ -51,14 +51,21 @@ export const MobileIcon = styled.div`
 
 
 export const NavItem = styled.li`
-    display: inline-block;
+    text-decoration: none;
     padding: .5rem;
     display: flex;
+    transition: all .4s;
+
+    &:hover{
+        transition: ease-in-out;
+        font-size: 110%;
+        text-decoration: underline;
+    }
+
 `;
 
 
 export const NavLink = styled(Link)`
-    text-decoration: none;
     height: 10rem;
 `;
 
