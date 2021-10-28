@@ -63,6 +63,7 @@ export const BodyContainer = styled.div`
     width: 100%;
     margin: 2%;
     @media screen and (max-width: 786px){
+        height: 90%;
     }
     @media screen and (max-width: 480px){
     }
