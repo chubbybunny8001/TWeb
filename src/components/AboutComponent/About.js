@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutBody, AboutCountainer, AboutHeader, AboutImage, AboutImageContiner, AboutSubHead, AboutContentContainer, AboutContentSpacer, BodyContainer } from './AboutElements';
+import { AboutBody, AboutCountainer, AboutHeader, AboutImage, AboutImageContiner, AboutSubHead, AboutContentContainer, BodyContainer } from './AboutElements';
 import OfMe from '../../assets/PicOfMe.jpg'
 
 export default function About(){
