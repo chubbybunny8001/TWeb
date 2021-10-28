@@ -13,10 +13,29 @@ export const Navbar = styled.nav`
 `;
 
 export const NavLogo = styled.h1`
-    margin: .25rem;
+    display: none;
+    text-align: center;
+    width: 30%;
+    margin: auto;
     margin-left: 1rem;
     padding: .15rem;
     color: #fdf8eb;
+    @media (max-width: 480px){
+        display: initial;
+        width: fit-content;
+    }
+`;
+export const NavLogo1 = styled.h1`
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    margin-left: 4%;
+    margin-right: 15%;
+    padding: .15rem;
+    color: #fdf8eb;
+    @media (max-width: 480px){
+        display: none;
+    }
 `;
 
 export const NavbarNav = styled.ul`
@@ -26,24 +45,15 @@ export const NavbarNav = styled.ul`
     margin: 0;
     display: flex;
     justify-content: space-evenly;
-
-    @media screen and (max-width: 786px){
-        display: none;
-    }
+    text-align: end;
 `;
 
 export const MobileIcon = styled.div`
-    display: none;
-
     @media screen and (max-width: 786px){
-        margin: 0;
-        padding: 0;
-        display: block;
-        position: absolute;
-        top: -16.5px;
-        right: -14px; 
-        transform: translate(-100%, 60%);
+        margin: auto;
+        text-align: end;
         font-size: 1.8rem;
+        margin-right: 3%;
         cursor: pointer;
         color: #fdf8eb;
     }
@@ -51,29 +61,38 @@ export const MobileIcon = styled.div`
 
 
 export const NavItem = styled.li`
-    display: inline-block;
-    padding: .5rem;
+    text-decoration: none;
     display: flex;
+    margin: auto;
+    @media screen and (max-width: 786px){
+        display: none;
+    }
 `;
 
+export const NavItem1 = styled.li`
+    display: none;
+    @media (max-width: 786px){
+        text-decoration: none;
+        display: flex;
+        margin-left: 70%;
+        margin-top: 2%;
+        display: initial;
+    }
+`;
 
 export const NavLink = styled(Link)`
-    text-decoration: none;
     height: 10rem;
-`;
-
-
-export const NavSvg = styled.svg`
-    width: 2rem;
-    height: 2rem;
-    min-width: 2rem;
-    color: #fdf8ec;
 `;
 
 export const NavText = styled.span`
     color: #fdf8ec;
-    margin-left: 1rem;
+    margin: auto;
     display: inline-block;
     text-decoration: none;
-    
+    transition: all .4s;
+
+    &:hover{
+        font-size: 110%;
+        text-decoration: underline;
+    }
 `;

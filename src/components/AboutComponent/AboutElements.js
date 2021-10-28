@@ -1,84 +1,80 @@
 import styled from "styled-components";
 
-export const HomeContentContainer = styled.div`
-    padding: 1rem;
-    display: grid;
+export const AboutContentContainer = styled.div`
+    background-color: #fdf8eb;
     height: 90vh;
-    background-color: #c38e7a;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .3fr .2fr 1.5fr;
-    grid-template-areas: 
-    "aboutImg aboutCont aboutCont"
-    "aboutImg aboutCont aboutCont"
-    "aboutImg aboutCont aboutCont"
-    ;
+    display: flex;
     @media screen and (max-width: 786px){
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-            "aboutImg"
-            "aboutCont"
-        ;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 480px){
+    }
+`;
+
+export const AboutImageContiner = styled.div`
+    text-align: center;
+    margin: auto;
+    width: 35%;
+    @media screen and (max-width: 786px){
+        width: 60%;
+    }
+    @media screen and (max-width: 480px){
+        width: 80%;
     }
 `;
 
 export const AboutImage = styled.img`
-grid-area: aboutImg;
-max-height: 100%;
-max-width: 100%;
-border-radius: 20px;
-margin: auto;
+    width: 90%;
+    border-radius: 10px;
 `;
 
 export const AboutCountainer = styled.div`
-    grid-area: aboutCont;
-    background-color: #000000;
-    align-items: center;
-    border-radius: 20px;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "aboutHead"
-    "aboutSubHead"
-    "aboutBody"
-    "aboutBody"
-    ;
-
-    @media screen and(max-width: 786px){
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "aboutHead aboutHead aboutSubHead aboutSubHead"
-        "aboutHead aboutHead aboutSubHead aboutSubHead"
-        "aboutBody aboutBody aboutBody aboutBody"
-        "aboutBody aboutBody aboutBody aboutBody"
-        ;
+    margin: auto;
+    width: 50%;
+    border: double;
+    border-radius: 15px;
+    border-width: 10px;
+    @media screen and (max-width: 786px){
+        width: 90%;
     }
-    overflow: hidden;
+    @media screen and (max-width: 480px){
+    }
 `;
 
 export const AboutHeader = styled.h1`
-    padding: .5rem;
-    color: #fdf8ec;
-    grid-area: aboutHead;
-    text-decoration: overline;
+    font-size: 2.25rem;
+    text-decoration: underline;
+    @media screen and (max-width: 786px){
+    }
+    @media screen and (max-width: 480px){
+    }
 `;
 
 export const AboutSubHead = styled.h3`
-padding: 1rem;
-color: #fdf8ec;
-grid-area: aboutSubHead;
+    font-size: 1.5rem;
+    margin-left: 2%;
+    @media screen and (max-width: 786px){
+    }
+    @media screen and (max-width: 480px){
+    }
+`;
+
+export const BodyContainer = styled.div`
+    width: 100%;
+    margin: 2%;
+    @media screen and (max-width: 786px){
+    }
+    @media screen and (max-width: 480px){
+    }
 `;
 
 export const AboutBody = styled.p`
-padding: .5rem;
-color: #fdf8ec;
-grid-area: aboutBody;
-height: 100%;
-overflow: scroll;
-overflow-x: hidden;
-font-size: 1.2em;
+    font-size: 1.5rem;
+    margin: 0 3.5% 0 0;
+    @media screen and (max-width: 786px){
+        font-size: 1.25rem;
+    }
+    @media screen and (max-width: 480px){
+        font-size: 1rem;
+    }
 `;

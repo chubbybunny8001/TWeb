@@ -1,179 +1,137 @@
 import styled from "styled-components";
 
-export const ContentContainer = styled.main`
-    padding: 0.5rem;
-    display: grid;
-    height: 90vh;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    grid-template-rows: 1fr 1fr .8fr;
-
-    grid-template-areas: 
-    "main main sidebar"
-    "main main sidebar"
-    "content1 content2 content3"
-    ;
-
-    grid-gap: .5rem;
-
-    @media screen and (max-width: 786px){
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr .5fr .5fr;
-        grid-template-areas: 
-        "main main main"
-        "main main main"
-        "sidebar content2 content2"
-        "sidebar content2 content2"
-        "content3 content3 content3" 
-        ;
-    }
-    @media screen and (max-width: 480px){
-        grid-template-columns: 1fr;
-        grid-template-rows: 3fr .2fr 1fr;
-        grid-template-areas: 
-        "main"
-        "content3"
-        "sidebar"
-        ;
-    }   
-`;
-
-export const LogoImage = styled.img`
-    grid-area: main;
-    max-width:100%;
-    max-height:100%;
-    border-radius: 20px;
-    margin: auto;
-`;
-
-export const SidebarContent = styled.div`
-    grid-area:sidebar;
-    background-color: #000000;
-    border-radius: 20px;
-    
-    @media screen and (max-width: 786px){
-        background-color: #c38e7a;
-    } 
-    @media screen and (max-width: 480px){
-        background-color: #000000;
-        height: 50%;
-    }
-`;
-
-export const SidebarContentContainer = styled.div`
-    display: grid;
-    height: 100%;
+export const ContentContainer = styled.div`
     width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: .3fr .3fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "heading heading"
-    "subHeading subHeading"
-    "sideBarBody sideBarBody"
-    "sideBarBody sideBarBody"
-    "sideBarBody sideBarBody"
-    ;
-    @media screen and (max-width: 480px){}
-`;
+    height: 90vh;
+    background-color: #fdf8eb;
+    display: flex;
 
-export const SidebarHead = styled.h1`
-    text-decoration: overline;
-    color: #fdf8ec;
-    margin: 1rem;
-
-    grid-area: heading;
-
-    @media screen and (max-width: 786px){
-        color: #000000;
-    } 
-    @media screen and (max-width: 480px){
-        color: #fdf8ec;
+    @media (max-width: 786px){
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
     }
 `;
 
-export const SidebarSubHead = styled.h2`
-    color: #fdf8ec;
-    margin: .5rem;
-    grid-area: subHeading;
-
-    @media screen and (max-width: 786px){
-        color: #000000;
-    } 
-    @media screen and (max-width: 480px){
-        color: #fdf8ec;
+export const TextContainer = styled.section`
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @media (max-width: 786px){
+        width: 100%;
+        flex-direction: row;
+        height: 35%;
     }
 `;
 
-export const ContactSquare = styled.p`
-    margin: .5rem;
+export const TextBox1 = styled.article`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: double;
+    margin: auto;
+    border-radius: 20px;
+    border-width: 10px;
+    width:  fit-content;
+    height: 35%;
+    @media (max-width: 786px){
+        height: 85%;
+        width: fit-content;    
+    }
+    @media (max-width: 480px){
+        display: none;
+    }
+`;
+
+export const HeadingsContainer = styled.div`
+    margin: auto;
+    padding: 0 10px 0 10px;
+`;
+
+export const TextBoxH1 = styled.h2`
+    font-size: 2.25rem;
     text-align: center;
-    font-weight: 800;
     text-decoration: underline;
-`;
-
-export const SidebarBody = styled.h3`
-    font-size: 1.5em;
-    color: #fdf8ec;
-    margin: .5rem;
-    grid-area: sideBarBody;
-
-    @media screen and (max-width: 786px){
-        
-        color: #000000;
-    } 
-    @media screen and (max-width: 480px){
-        color: #fdf8ec;
-        font-size: 1em;
-    }
-    height: 90%;
-    overflow-x: hidden;
-`;
-
-export const ContentContainerImg1 = styled.img`
-    grid-area:content1;
-    max-width:100%;
-    max-height: 100%;
-    border-radius: 20px;
-    margin: auto;
-    overflow: hidden;
-
-    &:hover{
-        border-radius: 50%;
-    }
-
-    @media screen and (max-width: 786px){
-        display: none;
-    }
-    @media screen and (max-width: 480px){
-        display: none;
+    @media (max-width: 786px){
+        font-size: 2rem;
     }
 `;
 
-export const ContentContainerImg2 = styled.img`
-    grid-area:content2;
-    max-width:100%;
-    max-height: 100%;
-    border-radius: 20px;
-    margin: auto;
-    overflow: hidden;
-
-    &:hover{
-        border-radius: 50%;
-    }
-
-    @media screen and (max-width: 480px){
-        display: none;
-    }
-`;
-
-export const ContentContainer3 = styled.div`
-    grid-area:content3;
-    background-color: #c38e7a;
-    border-radius: 20px;
-`;
-
-export const Content3 = styled.h2`
-    margin: 1rem;
+export const TextBoxH2 = styled.h2`
+    font-size: 1.5rem;
     text-align: center;
-    font-size: 2em;
+    @media (max-width: 786px){
+        font-size: 1.5rem;
+    }
+`;
+
+export const TextBox2 = styled.article`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: double;
+    margin: auto;
+    border-radius: 20px;
+    border-width: 10px;
+    width: fit-content;
+    height: 35%;
+    @media (max-width: 786px){
+        height: 85%;
+        width: fit-content;    
+    }
+    @media (max-width: 480px){
+        height: 95%;
+        width: 85%;
+    }
+`;
+
+export const HeadingsContainer2 = styled.div`
+    margin: auto;
+    padding: 0 10px 0 10px;
+`;
+
+export const TextBox2H2 = styled.h2`
+    font-size: 1.75rem;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: dotted;
+    border-radius: 10px;
+    @media (max-width: 786px){
+    }
+`;
+
+export const TextBoxH3 = styled.h3`
+    padding: 15px 0 5px 0;
+    text-align: center;
+    @media (max-width: 786px){
+        margin: auto;
+        padding: 0;
+    }
+`;
+
+export const ContactClickable = styled.a`
+    color: black;
+    text-decoration-color: blue;
+`;
+
+export const ImageContainer = styled.div`
+    width: 65%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    @media (max-width: 786px){
+        width: 100%;
+    }
+`;
+
+export const Image = styled.img`
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    @media (max-width: 786px){
+        width: 72%;    
+    }
+    @media (max-width: 480px){
+        width: 90%;
+    }
 `;
