@@ -24,7 +24,7 @@ export default function Home(){
                     </TextBox2H2>
                     <TextBoxH3>
                     Phone: <br /> <ContactClickable href="tel:4062234784">(406) 223-4784</ContactClickable><br />
-                    Email: <br /> <ContactClickable href="mailto:TayorStone8080@gmail.com?Subject=I Have A Project" target="_blank" sub>TaylorStone8080@gmail.com</ContactClickable>
+                    Email: <br /> <ContactClickable href="mailto:TayorStone8080@gmail.com?Subject=***I Have A Project For You***" target="_blank">TaylorStone8080@gmail.com</ContactClickable>
                     </TextBoxH3>
                 </HeadingsContainer2>
             </TextBox2>
