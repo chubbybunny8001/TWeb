@@ -15,7 +15,7 @@ import {
 export default function Navigation({toggle}){
     return (
                 <Navbar>
-                    <NavLogo>Taylor Larson Wood Repair</NavLogo>
+                    <NavLogo>TL Wood</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars></FaBars>
                     </MobileIcon>

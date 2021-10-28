@@ -7,6 +7,7 @@ import Project from './components/ProjectsComponent/Project';
 
 import Navigation from './components/NavbarComponent/Navbar';
 import Sidebar from './components/SideBar/SideBar';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
       <Route component={Art} path='/art' />
       <Route component={Project} path='/project' />
     </Switch>
-
+    <Footer />
     </BrowserRouter>
   )
 }
