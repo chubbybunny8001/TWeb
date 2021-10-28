@@ -45,6 +45,7 @@ export const AboutHeader = styled.h1`
     font-size: 2.25rem;
     text-decoration: underline;
     @media screen and (max-width: 786px){
+        font-size: 2rem;
     }
     @media screen and (max-width: 480px){
     }
@@ -63,7 +64,6 @@ export const BodyContainer = styled.div`
     width: 100%;
     margin: 2%;
     @media screen and (max-width: 786px){
-        height: 90%;
     }
     @media screen and (max-width: 480px){
     }
