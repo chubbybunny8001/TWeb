@@ -105,7 +105,7 @@ export default function Art(){
                             <SlideBodyCont>
                                 <BodyCont>
                                     <SlideTitle>{art.title}</SlideTitle>
-                                    <SlideBody projectId="6tkjpda9" dataset="production">{art.body}</SlideBody>
+                                    <SlideBody blocks={art.body} projectId="6tkjpda9" dataset="production" />
                                 </BodyCont>
                             </SlideBodyCont>
                         </Slide>

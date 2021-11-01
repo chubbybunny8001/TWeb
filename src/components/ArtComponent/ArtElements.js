@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BlockContent from "@sanity/block-content-to-react";
 
 export const ProjectsContentContainer = styled.div`
     width: 100%;
@@ -92,7 +93,7 @@ export const BodyCont = styled.div`
     
 `;
 
-export const SlideBody = styled.p`
+export const SlideBody = styled(BlockContent)`
     font-size: 1.5rem;
 `; 
 
