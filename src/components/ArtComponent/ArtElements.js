@@ -102,3 +102,13 @@ export const SlideTitle = styled.h2`
     margin: 2%;
     text-decoration: underline;
 `;
+
+export const NoProjectsCont = styled.div`
+    height: 90vh;
+    width: 100vw;
+`;
+
+export const NoProjectsText = styled.h1`
+    margin: auto;
+    text-align: center;
+`;
