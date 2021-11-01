@@ -1,49 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import sanityClient from '../../client.js';
-import pic from '../../assets/PicOfMe.jpg';
-
 
 import { BodyCont, ImgCont, NoProjectsCont, NoProjectsText, ProjectsContentContainer, ProjectsHeading, ProjectsHeadingContainer, Slide, SlideBody, SlideBodyCont, SlideImg, SlideImgCont, SlideShow, SlideShowSlider, SlideTitle } from './ArtElements.js';
-
-var mockData = [
-    {
-        slug: 1,
-        title: "Me 1",
-        body: "Body Text",
-        mainImage: { 
-            asset:{
-                url: pic,
-                
-            },
-            alt: "picMock1"
-        }
-    },
-    {
-        slug: 2,
-        title: "Me 2",
-        body: "Body Text more text hererer  fjda;kl fdkja; fjkl;asd jfkl;ad jfkl;ds jfk;ldas jfk;lda",
-        mainImage: { 
-            asset:{
-                url: pic,
-                
-            },
-            alt: "picMock1"
-        }
-    },
-    {
-        slug: 3,
-        title: "Me 3",
-        body: "Body Text im not wordsy so here fkjad fdfksd soifdas kel fjadksfla poisf jf jadiof iodj fodajfioadj poa jfpioaj po p io jioj fiosadj fiopjfias jiopa j",
-        mainImage: { 
-            asset:{
-                url: pic,
-                
-            },
-            alt: "picMock1"
-        }
-    }
-]
 
 //Art is all of the art, and artwork is the single peice of art!
 
