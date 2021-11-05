@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { PageContainer } from '../UniversalStyledElements';
 import sanityClient from '../../client.js';
+import { ProjectsContentContainer, ProjectsHeading, ProjectsHeadingContainer, ProjectsSubHeading, Slide, SlideShow, SlideShowSlider } from './ProjectElements';
 //Project page will be for artists current project he is working on!
 
 export default function Project(){
@@ -21,27 +21,27 @@ export default function Project(){
         }, []);
 
     return (
-        <PageContainer>
-            <main>
-            <section>
-                <h1>Projects Page</h1>
-                <h2>Welcome to a list of my recent projects!</h2>
-                <section>
-                    {projectData && projectData.map((project, index)=>(
-                    <article key={project.slug}>
-                        <h3>{project.title}</h3>
-                        <div>
-                            <span><strong>Finished On:</strong>:{' '}{new Date(project.date).toLocaleDateString()}</span>
-                            <span><strong>For:</strong>:{' '}{project.place}</span>
-                            <span><strong>Type:</strong>:{' '}{project.projectType}</span>
-                            <p>{project.description}</p>
-                        </div>
-                    </article>
-                    ))}
-                </section>
-            </section>
-        </main>
-        </PageContainer>
+            <ProjectsContentContainer>
+                <ProjectsHeadingContainer>
+                    <ProjectsHeading>Projects Page</ProjectsHeading>
+                    <ProjectsSubHeading>Recent Projects</ProjectsSubHeading>
+                </ProjectsHeadingContainer>
+                <SlideShow>
+                    <SlideShowSlider>
+                        {projectData && projectData.map((project, index)=>(
+                        <Slide key={project.slug}>
+                            <h3>{project.title}</h3>
+                            <div>
+                                <span><strong>Finished On:</strong>:{' '}{new Date(project.date).toLocaleDateString()}</span>
+                                <span><strong>For:</strong>:{' '}{project.place}</span>
+                                <span><strong>Type:</strong>:{' '}{project.projectType}</span>
+                                <p>{project.description}</p>
+                            </div>
+                        </Slide>
+                        ))}
+                    </SlideShowSlider>
+                </SlideShow>
+        </ProjectsContentContainer>
         )
 }
 
