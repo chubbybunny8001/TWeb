@@ -56,28 +56,12 @@ const move_animation = keyframes`
   }
 `;
 
-const move_to_top = keyframes`
-  from{
-    z-index: 0;
-  }
-  to{
-    z-index: 10;
-  }
-`;
-
 export const ContentContainer = styled.div`
   width: 100%;
   height: 85vh;
   background-color: #acc8e5;
   display: flex;
   overflow: hidden;
-`;
-
-export const HomePageContent = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  animation: ${move_to_top} 1s linear 7s infinite normal forwards;
 `;
 
 export const HomeCoverAnimationBlock = styled.div`
@@ -99,7 +83,7 @@ export const HomeCoverAnimationBlock = styled.div`
 
 export const HomeCoverAnimationColumn = styled.div`
   position: absolute;
-  z-index: 9;
+  z-index: 999;
   background-color: #2f5c75;
   top: 0;
   left: -40%;
