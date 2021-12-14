@@ -4,7 +4,7 @@ import { NavLink as Link } from "react-router-dom";
 export const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background: linear-gradient(rgba(112, 194, 191, 0), #acc8e5);
   overflow: hidden;
   display: flex;
   height: 10vh;
@@ -17,7 +17,7 @@ export const NavLogo = styled.h1`
   text-align: center;
   margin-left: 10vw;
   font-size: 10vmin;
-  color: #2f5c75;
+  color: black;
   @media (max-width: 480px) {
     display: initial;
     width: fit-content;
@@ -27,7 +27,7 @@ export const NavLogo1 = styled.h1`
   text-align: center;
   margin-left: 2.5vw;
   font-size: 5vmin;
-  color: #2f5c75;
+  color: black;
   @media (max-width: 480px) {
     display: none;
   }
@@ -37,7 +37,7 @@ export const MobileIcon = styled.div`
   font-size: 1.8rem;
   margin-right: 1.5vw;
   cursor: pointer;
-  color: #2f5c75;
+  color: black;
   transition: 1s ease;
   &:hover {
     color: #407fa0;

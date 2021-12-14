@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const FootContainer = styled.div`
   width: 100%;
   height: 5vh;
-  background-color: black;
+  background: linear-gradient(to top, rgba(112, 194, 191, 0), #acc8e5);
   display: flex;
   justify-content: space-between;
 `;
 
 export const FooterClickable = styled.a`
+  color: black;
   margin: auto;
-  color: #2f5c75;
   @media (max-width: 786px) {
     font-size: 80%;
   }
@@ -25,7 +25,7 @@ export const FooterClickable = styled.a`
 export const WebsiteRights = styled.small`
   margin: auto;
   font-size: 105%;
-  color: #2f5c75;
+  color: black;
   @media (max-width: 786px) {
     font-size: 80%;
   }
