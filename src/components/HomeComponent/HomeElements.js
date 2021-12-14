@@ -41,6 +41,7 @@ const text_fadeout2 = keyframes`
     z-index: 2;
   }
   100%{
+    color: transparent;
     z-index:0;
   }
 `;
@@ -55,12 +56,28 @@ const move_animation = keyframes`
   }
 `;
 
+const move_to_top = keyframes`
+  from{
+    z-index: 0;
+  }
+  to{
+    z-index: 10;
+  }
+`;
+
 export const ContentContainer = styled.div`
   width: 100%;
   height: 85vh;
   background-color: #acc8e5;
   display: flex;
   overflow: hidden;
+`;
+
+export const HomePageContent = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  animation: ${move_to_top} 1s linear 7s infinite normal forwards;
 `;
 
 export const HomeCoverAnimationBlock = styled.div`
@@ -82,7 +99,7 @@ export const HomeCoverAnimationBlock = styled.div`
 
 export const HomeCoverAnimationColumn = styled.div`
   position: absolute;
-  z-index: 999;
+  z-index: 9;
   background-color: #2f5c75;
   top: 0;
   left: -40%;
@@ -107,7 +124,7 @@ export const HomeCoverAnimationColumn2 = styled.div`
 `;
 
 export const HomeCoverAnimationHeader = styled.h2`
-  font-size: 20vmin;
+  font-size: 10vmin;
   z-index: 2;
   &.needsAnimation {
     animation: ${text_fadeout} 0.2s ease-out 2.2s;
@@ -133,7 +150,9 @@ export const HomeCoverAnimationBlock2 = styled.div`
 `;
 
 export const HomeCoverAnimationHeader2 = styled.h2`
-  font-size: 10vmin;
+  font-size: 8vmin;
+  text-align: center;
+  width: 60%;
   color: transparent;
   &.needsAnimation {
     animation: ${text_fadeout2} 0.4s ease-out 3.7s 1 reverse;

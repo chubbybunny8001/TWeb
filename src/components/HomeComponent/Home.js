@@ -7,7 +7,9 @@ import {
   HomeCoverAnimationColumn2,
   HomeCoverAnimationHeader,
   HomeCoverAnimationHeader2,
+  HomePageContent,
 } from "./HomeElements";
+
 export default function Home() {
   return (
     <ContentContainer>
@@ -15,6 +17,7 @@ export default function Home() {
         Phone:tel:4062234784 (406) 223-4784
         Email:mailto:TayorStone8080@gmail.com?Subject=***I Have A Project For You***" target="_blank">TaylorStone8080@gmail.com
        */}
+      <HomePageContent></HomePageContent>
       <HomeCoverAnimationBlock className="needsAnimation">
         <HomeCoverAnimationHeader className="needsAnimation">
           Welcome To...
