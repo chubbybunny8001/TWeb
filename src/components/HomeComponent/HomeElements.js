@@ -31,7 +31,7 @@ const text_fadeout = keyframes`
   }
   100%{
     color: #acc8e5;
-    z-index:1;
+    z-index:0;
   }
 `;
 
