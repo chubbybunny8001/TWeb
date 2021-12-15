@@ -4,6 +4,8 @@ export const AboutContentContainer = styled.div`
   background-color: #acc8e5;
   height: 85vh;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   @media screen and (max-width: 786px) {
     flex-direction: column;
   }
@@ -13,23 +15,21 @@ export const AboutContentContainer = styled.div`
 
 export const AboutImageContiner = styled.div`
   text-align: center;
-  margin: auto;
   width: 35%;
   @media screen and (max-width: 786px) {
     width: 60%;
   }
   @media screen and (max-width: 480px) {
-    width: 80%;
+    width: 70%;
   }
 `;
 
 export const AboutImage = styled.img`
-  width: 90%;
+  max-width: 90%;
   border-radius: 10px;
 `;
 
 export const AboutCountainer = styled.div`
-  margin: auto;
   width: 50%;
   border: double;
   border-radius: 15px;
@@ -41,24 +41,14 @@ export const AboutCountainer = styled.div`
   }
 `;
 
-export const AboutHeader = styled.h1`
-  font-size: 2.25rem;
+export const AboutHeader = styled.h2`
+  font-size: 5vmin;
   text-decoration: underline;
-  @media screen and (max-width: 786px) {
-    font-size: 2rem;
-  }
-  @media screen and (max-width: 480px) {
-    font-size: 1.5rem;
-  }
 `;
 
 export const AboutSubHead = styled.h3`
-  font-size: 1.5rem;
+  font-size: 4vmin;
   margin-left: 2%;
-  @media screen and (max-width: 786px) {
-  }
-  @media screen and (max-width: 480px) {
-  }
 `;
 
 export const BodyContainer = styled.div`
@@ -71,12 +61,6 @@ export const BodyContainer = styled.div`
 `;
 
 export const AboutBody = styled.p`
-  font-size: 1.5rem;
+  font-size: 3vmin;
   margin: 0 3.5% 0 0;
-  @media screen and (max-width: 786px) {
-    font-size: 1.25rem;
-  }
-  @media screen and (max-width: 480px) {
-    font-size: 1rem;
-  }
 `;

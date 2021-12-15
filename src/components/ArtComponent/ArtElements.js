@@ -26,13 +26,11 @@ export const ProjectsHeadingContainer = styled.section`
 `;
 
 export const ProjectsHeading = styled.h1`
-  padding: 2%;
-  margin: auto;
-  font-size: 3rem;
+  height: 5vh;
+  font-size: 8vmin;
 `;
 
 export const SlideShow = styled.div`
-  margin: auto;
   width: 100%;
   height: 100%;
 `;
@@ -40,8 +38,10 @@ export const SlideShow = styled.div`
 export const SlideShowSlider = styled.div``;
 
 export const Slide = styled.div`
-  margin: 0px 0 30px 0;
+  width: 100vw;
+  height: 85vh;
   display: flex;
+  justify-content: space-around;
   border-radius: 40px;
   @media (max-width: 786px) {
     flex-direction: column;
@@ -60,7 +60,7 @@ export const ImgCont = styled.div`
   width: 80%;
   margin: auto;
   @media (max-width: 786px) {
-    width: 50%;
+    width: 60%;
   }
 `;
 
@@ -75,14 +75,14 @@ export const SlideBodyCont = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 786px) {
     width: 100%;
-    height: 42%;
   }
 `;
 
 export const BodyCont = styled.div`
-  margin: auto;
   width: 80%;
   border: double;
   border-width: 15px;
@@ -91,11 +91,11 @@ export const BodyCont = styled.div`
 `;
 
 export const SlideBody = styled(BlockContent)`
-  font-size: 1.5rem;
+  font-size: 6vmin;
 `;
 
 export const SlideTitle = styled.h2`
-  font-size: 3rem;
+  font-size: 8vmin;
   margin: 2%;
   text-decoration: underline;
 `;
@@ -103,10 +103,14 @@ export const SlideTitle = styled.h2`
 export const NoProjectsCont = styled.div`
   height: 90vh;
   width: 100vw;
-  background-color: #fdf8eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #acc8e5;
 `;
 
-export const NoProjectsText = styled.h1`
+export const NoProjectsText = styled.h2`
+  font-size: 10vmin;
   margin: auto;
   text-align: center;
 `;
