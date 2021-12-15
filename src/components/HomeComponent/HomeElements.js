@@ -27,17 +27,6 @@ const bg_ripple2 = keyframes`
 const text_fadeout = keyframes`
   0%{
     color:  black;
-    z-index: 6;
-  }
-  100%{
-    color: #acc8e5;
-    z-index:0;
-  }
-`;
-
-const text_fadeout2 = keyframes`
-  0%{
-    color:  black;
     z-index: 2;
   }
   100%{
@@ -139,7 +128,7 @@ export const HomeCoverAnimationHeader2 = styled.h2`
   width: 60%;
   color: transparent;
   &.needsAnimation {
-    animation: ${text_fadeout2} 0.4s ease-out 3.7s 1 reverse;
+    animation: ${text_fadeout} 0.4s ease-out 3.7s 1 reverse;
     animation-fill-mode: forwards;
     z-index: 2;
   }
