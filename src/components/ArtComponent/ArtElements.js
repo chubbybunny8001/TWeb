@@ -28,6 +28,7 @@ export const ProjectsHeadingContainer = styled.section`
 export const ProjectsHeading = styled.h1`
   height: 5vh;
   font-size: 8vmin;
+  margin-bottom: 5vh;
 `;
 
 export const SlideShow = styled.div`
@@ -42,10 +43,16 @@ export const Slide = styled.div`
   height: 85vh;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   border-radius: 40px;
   @media (max-width: 786px) {
     flex-direction: column;
   }
+`;
+
+export const Spacer = styled.div`
+  width: 100%;
+  margin-top: 5vh;
 `;
 
 export const SlideImgCont = styled.div`
@@ -60,7 +67,7 @@ export const ImgCont = styled.div`
   width: 80%;
   margin: auto;
   @media (max-width: 786px) {
-    width: 60%;
+    width: 55%;
   }
 `;
 
