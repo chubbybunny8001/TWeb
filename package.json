@@ -1,10 +1,10 @@
 {
   "name": "taylor_website",
-  "version": "0.1.0",
+  "version": "0.7.0",
   "private": true,
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
-    "@sanity/client": "^2.18.0",
+    "@sanity/client": "^2.23.1",
     "@sanity/image-url": "^1.0.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
