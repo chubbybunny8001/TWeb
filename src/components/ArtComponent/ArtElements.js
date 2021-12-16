@@ -57,7 +57,7 @@ export const Spacer = styled.div`
 
 export const SlideImgCont = styled.div`
   display: flex;
-  width: 50%;
+  width: 40%;
   @media (max-width: 786px) {
     width: 100%;
   }

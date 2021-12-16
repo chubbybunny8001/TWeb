@@ -18,6 +18,7 @@ import {
   SlideShow,
   SlideShowSlider,
   SlideTitle,
+  Spacer,
 } from "./ArtElements.js";
 
 //Art is all of the art, and artwork is the single peice of art!
@@ -68,6 +69,7 @@ export default function Art() {
       <ProjectsHeadingContainer>
         <ProjectsHeading>My Recent Projects</ProjectsHeading>
       </ProjectsHeadingContainer>
+      <Spacer></Spacer>
       <SlideShow>
         <SlideShowSlider>
           {postData &&
